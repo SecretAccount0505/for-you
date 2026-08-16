@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You</title>
+
+    <meta
+        name="description"
+        content="A little collection of 100 reasons why I love you."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- =================================================
+     LOADING SCREEN
+================================================== -->
+
+<div id="loadingScreen">
+
+    <div class="loader-content">
+
+        <div class="loader-symbol">
+            ✦
+        </div>
+
+        <div class="loader-line">
+
+            <div id="loaderProgress"></div>
+
+        </div>
+
+        <div class="loader-text">
+            FOR YOU
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+        <div class="gradient-orb orb-one"></div>
+        <div class="gradient-orb orb-two"></div>
+        <div class="gradient-orb orb-three"></div>
+    </div>
+
+    <div id="particles"></div>
+    <div id="cursorGlow"></div>
+
+    <!-- =================================================
+     MUSIC PLAYER
+================================================== -->
+
+<audio
+    id="backgroundMusic"
+    loop
+    preload="auto"
+>
+    <source
+        src="music/song.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+<button
+    id="musicButton"
+    class="music-button"
+    aria-label="Toggle music"
+>
+
+    <span
+        id="musicIcon"
+        class="music-icon"
+    >
+        ♫
+    </span>
+
+    <span
+        id="musicLabel"
+    >
+        Sound
+    </span>
+
+</button>
+
+
+    
+    <!-- =====================================================
+         MAIN WEBSITE
+    ====================================================== -->
+
+    <main id="app">
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section id="intro" class="screen active">
+
+            <div class="intro-content">
+
+                <div class="tiny-label">
+                    A LITTLE SOMETHING FOR YOU HOLLY!
+                </div>
+
+                <div class="intro-star">✦</div>
+
+                <h1>
+                    100
+                    <span>Reasons</span>
+                </h1>
+
+                <p class="intro-description">
+                    I could easily find a thousand more,
+                    but I wanted to give you something
+                    you could actually keep.
+                </p>
+
+                <div class="intro-note">
+                    <span>For you Holly.</span>
+                </div>
+
+                <button id="beginButton" class="main-button">
+                    <span>Begin</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REASONS
+        ================================================== -->
+
+        <section id="reasons" class="screen">
+
+            <div class="reasons-wrapper">
+
+                <!-- TOP NAVIGATION -->
+
+                <div class="reason-navigation">
+
+                    <button
+                        id="previousButton"
+                        class="round-button"
+                        aria-label="Previous reason"
+                    >
+                        ←
+                    </button>
+
+                    <div class="progress-area">
+
+                        <div class="progress-information">
+                            <span>REASONS</span>
+                            <span id="counter">01 / 100</span>
+                        </div>
+
+                        <div class="progress-background">
+                            <div
+                                id="progress"
+                                class="progress"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                    <button
+                        id="nextButton"
+                        class="round-button"
+                        aria-label="Next reason"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+
+                <!-- REASON CARD -->
+
+                <article id="reasonCard" class="reason-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="reason-content">
+
+                        <div
+                            id="reasonNumber"
+                            class="reason-number"
+                        >
+                            REASON 01
+                        </div>
+
+                        <div class="star">
+                            ✦
+                        </div>
+
+                        <h2 id="reasonTitle">
+                            Your smile.
+                        </h2>
+
+                        <p id="reasonText">
+                            There's something about your smile
+                            that can completely change my day.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BOTTOM -->
+
+                <div class="reason-footer">
+
+                    <span class="keyboard-hint">
+                        ← previous &nbsp;&nbsp; next →
+                    </span>
+
+                    <span class="mobile-hint">
+                        Swipe to continue
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+            MILESTONE
+        ================================================== -->
+
+        <section id="milestone" class="screen">
+
+            <div class="milestone-content">
+
+                <div class="milestone-star">
+                    ✦
+                </div>
+
+                <div
+                    id="milestoneNumber"
+                    class="milestone-number"
+                >
+                    25
+                </div>
+
+                <h2 id="milestoneTitle">
+                    25 already?
+                </h2>
+                    
+                <p id="milestoneText">
+                    And somehow I still have so much more to say.
+                </p>
+
+                <button
+                    id="milestoneContinue"
+                    class="main-button"
+                >
+                    <span>Keep going</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =================================================
+             FINAL SCREEN
+        ================================================== -->
+
+        <!-- =================================================
+     FINAL LETTER EXPERIENCE
+================================================== -->
+
+<section id="final" class="screen">
+
+    <div class="final-content">
+
+        <!-- PHASE 1 -->
+
+        <div id="finalIntro" class="final-phase active">
+
+            <div class="final-star">
+                ✦
+            </div>
+
+            <div class="tiny-label">
+                100 / 100
+            </div>
+
+            <h2>
+                Okay...
+            </h2>
+
+            <h3>
+                That's 100.
+            </h3>
+
+            <p>
+                But there's something I couldn't fit
+                into a list.
+            </p>
+
+            <button
+                id="letterButton"
+                class="main-button"
+            >
+                <span>There's more</span>
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+        <!-- PHASE 2 -->
+
+        <div
+            id="letter"
+            class="final-phase"
+        >
+
+            <div class="letter-header">
+
+                <div class="tiny-label">
+                    A LITTLE LETTER
+                </div>
+
+                <div class="letter-star">
+                    ✦
+                </div>
+
+            </div>
+
+
+            <div
+                id="letterText"
+                class="letter-text"
+            >
+
+                <p>
+                    I could have written another hundred
+                    reasons, but eventually I realised
+                    that none of them would really explain
+                    what you mean to me.
+                </p>
+
+                <p>
+                    It's not just one thing about you.
+                    It's all the little things together.
+                    The conversations, the laughs, the
+                    random moments, the memories and
+                    everything in between.
+                </p>
+
+                <p>
+                    I don't need everything to be perfect.
+                    I just appreciate having you in my life
+                    and getting to make memories with you.
+                </p>
+
+                <p>
+                    So if you ever wonder whether you
+                    matter to me...
+                </p>
+
+                <p class="letter-emphasis">
+                    You do Holly!, I love you!
+                </p>
+
+            </div>
+
+
+            <button
+                id="letterContinue"
+                class="main-button"
+            >
+                <span>One last thing</span>
+                <span>→</span>
+            </button>
+
+        </div>
+
+
+        <!-- PHASE 3 -->
+
+        <div
+            id="finalMessage"
+            class="final-phase"
+        >
+
+            <div class="final-message-symbol">
+                ✦
+            </div>
+
+            <div class="tiny-label">
+                FOR YOU
+            </div>
+
+            <h2>
+                100 reasons.
+            </h2>
+
+            <h3>
+                Why I love you more!
+            </h3>
+
+            <p>
+                And somehow, that still doesn't
+                feel like enough.
+            </p>
+
+            <div class="final-heart">
+                ♡
+            </div>
+
+            <button
+                id="restartButton"
+                class="main-button"
+            >
+                <span>Start again</span>
+                <span>↻</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
